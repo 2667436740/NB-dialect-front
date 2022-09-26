@@ -3,7 +3,7 @@
     <audio-show-card v-for="item in cardList" :key="item.id" :data="item" />
 
     <image
-      src="../../static/img/tabbar/add.png"
+      src="../../static/img/add.png"
       mode="scaleToFill"
       class="suspend-btn"
       @click="goToPage"

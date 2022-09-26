@@ -8,12 +8,12 @@
         :recordOptions="recordOptions"
       ></nb-voice-record>
     </view>
-    <play-audio :audio="audio" v-if="Object.keys(audio).length > 0"/>
+    <play-audio :audio="audio" v-show="Object.keys(audio).length > 0" />
   </div>
 </template>
 
 <script>
-import PlayAudio from '../../components/audio/PlayAudio.vue';
+import PlayAudio from "../../components/audio/PlayAudio.vue";
 export default {
   name: "addDialect",
   components: { PlayAudio },

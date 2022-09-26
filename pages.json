@@ -36,20 +36,20 @@
 		"list": [
 			{
 				"pagePath": "pages/tabbar/home/home",
-				"iconPath": "static/img/tabbar/home.png",
-				"selectedIconPath": "static/img/tabbar/homeactive.png"
+				"iconPath": "static/img/home.png",
+				"selectedIconPath": "static/img/homeactive.png"
 				// "text": "首页"
 			},
 			{
 				"pagePath": "pages/tabbar/tabbar-2/tabbar-2",
-				"iconPath": "static/img/tabbar/all.png",
-				"selectedIconPath": "static/img/tabbar/allactive.png"
+				"iconPath": "static/img/all.png",
+				"selectedIconPath": "static/img/allactive.png"
 				// "text": "关注"
 			},
 			{
 				"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
-				"iconPath": "static/img/tabbar/me.png",
-				"selectedIconPath": "static/img/tabbar/meactive.png"
+				"iconPath": "static/img/me.png",
+				"selectedIconPath": "static/img/meactive.png"
 				// "text": "我"
 			}
 		]
