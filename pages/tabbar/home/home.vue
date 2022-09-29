@@ -18,7 +18,6 @@ export default {
   components: { AudioShowCard },
   data() {
     return {
-      title: "Hello",
       cardList: [
         {
           id: 1,
@@ -84,7 +83,6 @@ export default {
 
 <style lang="scss">
 .content {
-  height: 400upx;
   padding: 20upx;
   position: relative;
   .suspend-btn {

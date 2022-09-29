@@ -12,7 +12,7 @@
 			"style": {}
 		},
 		{
-			"path": "pages/tabbar/tabbar-5/tabbar-5",
+			"path": "pages/tabbar/mine/mine",
 			"style": {}
 		},
 		{
@@ -47,7 +47,7 @@
 				// "text": "关注"
 			},
 			{
-				"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+				"pagePath": "pages/tabbar/mine/mine",
 				"iconPath": "static/img/me.png",
 				"selectedIconPath": "static/img/meactive.png"
 				// "text": "我"

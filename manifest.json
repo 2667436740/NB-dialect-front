@@ -11,7 +11,9 @@
     "app-plus" : {
         "usingComponents" : true,
         "compilerVersion" : 3,
-        "modules" : {},
+        "modules" : {
+            "OAuth" : {}
+        },
         "distribute" : {
             "android" : {
                 "permissions" : [
@@ -33,12 +35,20 @@
                 ]
             },
             "ios" : {},
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wxee4a065b0b28aa03",
+                        "appsecret" : "6730fcf40ed62f81452511265f308205",
+                        "UniversalLinks" : ""
+                    }
+                }
+            }
         }
     },
     "quickapp" : {},
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wxee4a065b0b28aa03",
         "setting" : {
             "urlCheck" : true
         },
