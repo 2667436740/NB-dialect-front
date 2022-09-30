@@ -5,9 +5,17 @@
       <view @click="login" class="login-btn">微信用户一键登录</view>
     </view>
     <view v-else class="info-page">
-      <view class="t-box">
-        <view class="name">{{ userInfo.nickName }}</view>
-        <img :src="userInfo.avatarUrl" mode="scaleToFill" class="avatar" />
+      <view class="info-box">
+        <view class="t-box">
+          <view class="name">{{ userInfo.nickName }}</view>
+          <img :src="userInfo.avatarUrl" mode="scaleToFill" class="avatar" />
+        </view>
+        <view class="gap-row"></view>
+        <view class="b-box">
+          <view class="b-item">我的语音</view>
+          <view class="gap-col"></view>
+          <view class="b-item">我的收藏</view>
+        </view>
       </view>
     </view>
   </view>
@@ -110,21 +118,44 @@ export default {
     }
   }
   .info-page {
-    .t-box {
-      height: 300upx;
+    .info-box {
+      // height: 300upx;
       background-color: $uni-theme2;
       border-radius: $uni-border-radius-lg;
-      display: flex;
-      padding: 50upx;
-      .name {
-        color: $uni-text-color-inverse;
-        font-size: 48upx;
-        flex: 1;
+      padding: 40upx 50upx;
+      .t-box {
+        display: flex;
+        .name {
+          color: $uni-text-color-inverse;
+          font-size: 48upx;
+          flex: 1;
+        }
+        .avatar {
+          width: 150upx;
+          height: 150upx;
+          border-radius: 50%;
+        }
       }
-      .avatar {
-        width: 150upx;
-        height: 150upx;
-        border-radius: 50%;
+      .gap-row {
+        height: 2upx;
+        width: 100%;
+        margin: 40upx 0;
+        background-color: $uni-text-color-inverse;
+      }
+      .b-box {
+        display: flex;
+        .b-item {
+          flex: 1;
+          text-align: center;
+          color: $uni-text-color-inverse;
+          font-size: $uni-font-size-lg;
+        }
+        .gap-col {
+          width: 2upx;
+          // height: 100%;
+          // margin: 50upx 0;
+          background-color: $uni-text-color-inverse;
+        }
       }
     }
   }
