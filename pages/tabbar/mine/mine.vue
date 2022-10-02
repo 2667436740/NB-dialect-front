@@ -12,9 +12,9 @@
         </view>
         <view class="gap-row"></view>
         <view class="b-box">
-          <view class="b-item">我的语音</view>
+          <view class="b-item" @click="onClick_myVoice">我的语音</view>
           <view class="gap-col"></view>
-          <view class="b-item">我的收藏</view>
+          <view class="b-item" @click="onClick_myCollect">我的收藏</view>
         </view>
       </view>
     </view>
@@ -87,6 +87,20 @@ export default {
         console.log(e);
       }
     },
+    onClick_myVoice() {
+      uni.showToast({
+        title: '开发中',
+        icon: null,
+        mask: true
+      })
+    },
+    onClick_myCollect() {
+      uni.showToast({
+        title: '开发中',
+        icon: null,
+        mask: true
+      })
+    }
   },
 };
 </script>
