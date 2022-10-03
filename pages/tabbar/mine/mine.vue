@@ -22,10 +22,11 @@
 </template>
 
 <script>
+import {postSignIn} from '../../../config/api'
 export default {
   data() {
     return {
-      isLog: false,
+      isLog: false, //是否登录
       userInfo: {},
     };
   },
@@ -47,7 +48,7 @@ export default {
         });
       });
     },
-    getLogin() {
+    getWXcode() {
       return new Promise((resolve, reject) => {
         uni.login({
           success(res) {
@@ -59,18 +60,21 @@ export default {
         });
       });
     },
-    login() {
+    async login() {
       let userInfo = this.getUserInfo();
-      let wxCode = this.getLogin();
-
+      let wxCode = this.getWXcode();
       Promise.all([userInfo, wxCode])
-        .then((res) => {
+        .then(async (res) => {
           //都获取权限成功
-          // console.log(res);
           this.userInfo = res[0];
           uni.setStorageSync("userInfo", res[0]);
           this.isLog = true;
-          // uni.setStorageSync('id', res[1]);
+          const params = {
+            userInfo: res[0],
+            WXcode: res[1]
+          }
+          const reqRes = await postSignIn(params)
+          console.log(reqRes);
         })
         .catch((err) => {
           console.log(err);
@@ -89,18 +93,18 @@ export default {
     },
     onClick_myVoice() {
       uni.showToast({
-        title: '开发中',
+        title: "开发中",
         icon: null,
-        mask: true
-      })
+        mask: true,
+      });
     },
     onClick_myCollect() {
       uni.showToast({
-        title: '开发中',
+        title: "开发中",
         icon: null,
-        mask: true
-      })
-    }
+        mask: true,
+      });
+    },
   },
 };
 </script>

@@ -35,7 +35,7 @@ export default {
 <style lang="scss">
 .card-container {
   margin-bottom: 30upx;
-  background-color: $uni-bg-color;
+  background-color: $uni-theme0;
   border-radius: $uni-border-radius-lg;
   box-shadow: $uni-box-shadow1;
   padding: 20upx;
